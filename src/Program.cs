@@ -1,7 +1,11 @@
-﻿using YaeAchievement;
-using YaeAchievement.AppCenterSDK;
-using YaeAchievement.AppCenterSDK.Models;
+﻿global using YaeAchievement;
 using static YaeAchievement.Utils;
+
+var gamePath = args.FirstOrDefault();
+if (!File.Exists(gamePath))
+{
+    return;
+}
 
 InstallExitHook();
 CheckSelfIsRunning();
@@ -10,22 +14,16 @@ InstallExceptionHook();
 CheckGenshinIsRunning();
 
 Console.WriteLine("----------------------------------------------------");
-Console.WriteLine($"YaeAchievement - 原神成就导出工具 ({GlobalVars.AppVersionName})");
-Console.WriteLine("https://github.com/HolographicHat/YaeAchievement");
+Console.WriteLine($"YaeAchievement (Modified by Xunkong) - 原神成就导出工具 ({GlobalVars.AppVersionName})");
+Console.WriteLine("https://github.com/xunkong/YaeAchievement");
+Console.WriteLine("原项目 https://github.com/HolographicHat/YaeAchievement");
 Console.WriteLine("----------------------------------------------------");
 
-LoadConfig();
-CheckUpdate();
-AppCenter.Init();
-new EventLog("AppInit") {
-    Properties = {
-        { "AppVersion", GlobalVars.AppVersionName },
-        { "SystemVersion", DeviceHelper.GetSystemVersion() }
-    }
-}.Enqueue();
-StartAndWaitResult(GlobalVars.GamePath, str => {
+
+StartAndWaitResult(gamePath, str =>
+{
     GlobalVars.UnexpectedExit = false;
     var list = AchievementAllDataNotify.Parser.ParseFrom(Convert.FromBase64String(str));
-    Export.Choose(list);
+    Export.ToXunkong(list);
     return true;
 });

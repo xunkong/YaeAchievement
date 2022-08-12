@@ -5,10 +5,12 @@
 #pragma warning disable 1591, 0612, 3021, 8981
 #region Designer generated code
 
-using pb = global::Google.Protobuf;
-using pbc = global::Google.Protobuf.Collections;
-using pbr = global::Google.Protobuf.Reflection;
-using scg = global::System.Collections.Generic;
+using pb = Google.Protobuf;
+using pbc = Google.Protobuf.Collections;
+using pbr = Google.Protobuf.Reflection;
+using scg = System.Collections.Generic;
+
+namespace YaeAchievement;
 /// <summary>Holder for reflection information generated from UpdateInfo.proto</summary>
 public static partial class UpdateInfoReflection {
 
@@ -20,7 +22,7 @@ public static partial class UpdateInfoReflection {
   private static pbr::FileDescriptor descriptor;
 
   static UpdateInfoReflection() {
-    byte[] descriptorData = global::System.Convert.FromBase64String(
+    byte[] descriptorData = System.Convert.FromBase64String(
         string.Concat(
           "ChBVcGRhdGVJbmZvLnByb3RvIqwBCgpVcGRhdGVJbmZvEhMKC3ZlcnNpb25D",
           "b2RlGAEgASgNEhMKC3ZlcnNpb25OYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9u",
@@ -30,7 +32,7 @@ public static partial class UpdateInfoReflection {
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::UpdateInfo), global::UpdateInfo.Parser, new[]{ "VersionCode", "VersionName", "Description", "PackageLink", "ForceUpdate", "EnableLibDownload", "EnableAutoDownload" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(UpdateInfo), UpdateInfo.Parser, new[]{ "VersionCode", "VersionName", "Description", "PackageLink", "ForceUpdate", "EnableLibDownload", "EnableAutoDownload" }, null, null, null, null)
         }));
   }
   #endregion
@@ -44,32 +46,32 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
 {
   private static readonly pb::MessageParser<UpdateInfo> _parser = new pb::MessageParser<UpdateInfo>(() => new UpdateInfo());
   private pb::UnknownFieldSet _unknownFields;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<UpdateInfo> Parser { get { return _parser; } }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::UpdateInfoReflection.Descriptor.MessageTypes[0]; }
+    get { return UpdateInfoReflection.Descriptor.MessageTypes[0]; }
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   pbr::MessageDescriptor pb::IMessage.Descriptor {
     get { return Descriptor; }
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public UpdateInfo() {
     OnConstruction();
   }
 
   partial void OnConstruction();
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public UpdateInfo(UpdateInfo other) : this() {
     versionCode_ = other.versionCode_;
     versionName_ = other.versionName_;
@@ -81,8 +83,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public UpdateInfo Clone() {
     return new UpdateInfo(this);
   }
@@ -90,8 +92,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   /// <summary>Field number for the "versionCode" field.</summary>
   public const int VersionCodeFieldNumber = 1;
   private uint versionCode_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public uint VersionCode {
     get { return versionCode_; }
     set {
@@ -102,8 +104,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   /// <summary>Field number for the "versionName" field.</summary>
   public const int VersionNameFieldNumber = 2;
   private string versionName_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public string VersionName {
     get { return versionName_; }
     set {
@@ -114,8 +116,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   /// <summary>Field number for the "description" field.</summary>
   public const int DescriptionFieldNumber = 3;
   private string description_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public string Description {
     get { return description_; }
     set {
@@ -126,8 +128,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   /// <summary>Field number for the "packageLink" field.</summary>
   public const int PackageLinkFieldNumber = 4;
   private string packageLink_ = "";
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public string PackageLink {
     get { return packageLink_; }
     set {
@@ -138,8 +140,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   /// <summary>Field number for the "forceUpdate" field.</summary>
   public const int ForceUpdateFieldNumber = 5;
   private bool forceUpdate_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public bool ForceUpdate {
     get { return forceUpdate_; }
     set {
@@ -150,8 +152,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   /// <summary>Field number for the "enableLibDownload" field.</summary>
   public const int EnableLibDownloadFieldNumber = 6;
   private bool enableLibDownload_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public bool EnableLibDownload {
     get { return enableLibDownload_; }
     set {
@@ -162,8 +164,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   /// <summary>Field number for the "enableAutoDownload" field.</summary>
   public const int EnableAutoDownloadFieldNumber = 7;
   private bool enableAutoDownload_;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public bool EnableAutoDownload {
     get { return enableAutoDownload_; }
     set {
@@ -171,14 +173,14 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
     }
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
     return Equals(other as UpdateInfo);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public bool Equals(UpdateInfo other) {
     if (ReferenceEquals(other, null)) {
       return false;
@@ -196,8 +198,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
     return Equals(_unknownFields, other._unknownFields);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
     if (VersionCode != 0) hash ^= VersionCode.GetHashCode();
@@ -213,14 +215,14 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
     return hash;
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override string ToString() {
     return pb::JsonFormatter.ToDiagnosticString(this);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public void WriteTo(pb::CodedOutputStream output) {
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
@@ -260,8 +262,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   }
 
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
     if (VersionCode != 0) {
       output.WriteRawTag(8);
@@ -297,8 +299,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   }
   #endif
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
     if (VersionCode != 0) {
@@ -328,8 +330,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
     return size;
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public void MergeFrom(UpdateInfo other) {
     if (other == null) {
       return;
@@ -358,8 +360,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public void MergeFrom(pb::CodedInputStream input) {
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     input.ReadRawMessage(this);
@@ -404,8 +406,8 @@ public sealed partial class UpdateInfo : pb::IMessage<UpdateInfo>
   }
 
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
     uint tag;
     while ((tag = input.ReadTag()) != 0) {

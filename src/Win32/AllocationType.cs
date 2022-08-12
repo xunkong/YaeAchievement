@@ -1,7 +1,8 @@
 ﻿namespace YaeAchievement.Win32;
 
 [Flags]
-public enum AllocationType : uint {
+public enum AllocationType : uint
+{
     Commit = 0x1000,
     Reserve = 0x2000,
     Decommit = 0x4000,

@@ -5,10 +5,12 @@
 #pragma warning disable 1591, 0612, 3021, 8981
 #region Designer generated code
 
-using pb = global::Google.Protobuf;
-using pbc = global::Google.Protobuf.Collections;
-using pbr = global::Google.Protobuf.Reflection;
-using scg = global::System.Collections.Generic;
+using pb = Google.Protobuf;
+using pbc = Google.Protobuf.Collections;
+using pbr = Google.Protobuf.Reflection;
+using scg = System.Collections.Generic;
+
+namespace YaeAchievement;
 /// <summary>Holder for reflection information generated from AchievementAllDataNotify.proto</summary>
 public static partial class AchievementAllDataNotifyReflection {
 
@@ -20,7 +22,7 @@ public static partial class AchievementAllDataNotifyReflection {
   private static pbr::FileDescriptor descriptor;
 
   static AchievementAllDataNotifyReflection() {
-    byte[] descriptorData = global::System.Convert.FromBase64String(
+    byte[] descriptorData = System.Convert.FromBase64String(
         string.Concat(
           "Ch5BY2hpZXZlbWVudEFsbERhdGFOb3RpZnkucHJvdG8iowIKGEFjaGlldmVt",
           "ZW50QWxsRGF0YU5vdGlmeRIzCgRsaXN0GAQgAygLMiUuQWNoaWV2ZW1lbnRB",
@@ -33,7 +35,7 @@ public static partial class AchievementAllDataNotifyReflection {
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::AchievementAllDataNotify), global::AchievementAllDataNotify.Parser, new[]{ "List" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::AchievementAllDataNotify.Types.Achievement), global::AchievementAllDataNotify.Types.Achievement.Parser, new[]{ "Id", "Status", "Current", "Total", "Timestamp" }, null, new[]{ typeof(global::AchievementAllDataNotify.Types.Achievement.Types.Status) }, null, null)})
+          new pbr::GeneratedClrTypeInfo(typeof(AchievementAllDataNotify), AchievementAllDataNotify.Parser, new[]{ "List" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(AchievementAllDataNotify.Types.Achievement), AchievementAllDataNotify.Types.Achievement.Parser, new[]{ "Id", "Status", "Current", "Total", "Timestamp" }, null, new[]{ typeof(AchievementAllDataNotify.Types.Achievement.Types.Status) }, null, null)})
         }));
   }
   #endregion
@@ -47,62 +49,62 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
 {
   private static readonly pb::MessageParser<AchievementAllDataNotify> _parser = new pb::MessageParser<AchievementAllDataNotify>(() => new AchievementAllDataNotify());
   private pb::UnknownFieldSet _unknownFields;
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pb::MessageParser<AchievementAllDataNotify> Parser { get { return _parser; } }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static pbr::MessageDescriptor Descriptor {
-    get { return global::AchievementAllDataNotifyReflection.Descriptor.MessageTypes[0]; }
+    get { return AchievementAllDataNotifyReflection.Descriptor.MessageTypes[0]; }
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   pbr::MessageDescriptor pb::IMessage.Descriptor {
     get { return Descriptor; }
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public AchievementAllDataNotify() {
     OnConstruction();
   }
 
   partial void OnConstruction();
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public AchievementAllDataNotify(AchievementAllDataNotify other) : this() {
     list_ = other.list_.Clone();
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public AchievementAllDataNotify Clone() {
     return new AchievementAllDataNotify(this);
   }
 
   /// <summary>Field number for the "list" field.</summary>
   public const int ListFieldNumber = 4;
-  private static readonly pb::FieldCodec<global::AchievementAllDataNotify.Types.Achievement> _repeated_list_codec
-      = pb::FieldCodec.ForMessage(34, global::AchievementAllDataNotify.Types.Achievement.Parser);
-  private readonly pbc::RepeatedField<global::AchievementAllDataNotify.Types.Achievement> list_ = new pbc::RepeatedField<global::AchievementAllDataNotify.Types.Achievement>();
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-  public pbc::RepeatedField<global::AchievementAllDataNotify.Types.Achievement> List {
+  private static readonly pb::FieldCodec<AchievementAllDataNotify.Types.Achievement> _repeated_list_codec
+      = pb::FieldCodec.ForMessage(34, AchievementAllDataNotify.Types.Achievement.Parser);
+  private readonly pbc::RepeatedField<AchievementAllDataNotify.Types.Achievement> list_ = new pbc::RepeatedField<AchievementAllDataNotify.Types.Achievement>();
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  public pbc::RepeatedField<AchievementAllDataNotify.Types.Achievement> List {
     get { return list_; }
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override bool Equals(object other) {
     return Equals(other as AchievementAllDataNotify);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public bool Equals(AchievementAllDataNotify other) {
     if (ReferenceEquals(other, null)) {
       return false;
@@ -114,8 +116,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
     return Equals(_unknownFields, other._unknownFields);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override int GetHashCode() {
     int hash = 1;
     hash ^= list_.GetHashCode();
@@ -125,14 +127,14 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
     return hash;
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public override string ToString() {
     return pb::JsonFormatter.ToDiagnosticString(this);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public void WriteTo(pb::CodedOutputStream output) {
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
@@ -145,8 +147,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
   }
 
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
     list_.WriteTo(ref output, _repeated_list_codec);
     if (_unknownFields != null) {
@@ -155,8 +157,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
   }
   #endif
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public int CalculateSize() {
     int size = 0;
     size += list_.CalculateSize(_repeated_list_codec);
@@ -166,8 +168,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
     return size;
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public void MergeFrom(AchievementAllDataNotify other) {
     if (other == null) {
       return;
@@ -176,8 +178,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
   }
 
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public void MergeFrom(pb::CodedInputStream input) {
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     input.ReadRawMessage(this);
@@ -198,8 +200,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
   }
 
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
     uint tag;
     while ((tag = input.ReadTag()) != 0) {
@@ -218,8 +220,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
 
   #region Nested types
   /// <summary>Container for nested types declared in the AchievementAllDataNotify message type.</summary>
-  [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+  [System.Diagnostics.DebuggerNonUserCodeAttribute]
+  [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
   public static partial class Types {
     public sealed partial class Achievement : pb::IMessage<Achievement>
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -228,32 +230,32 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
     {
       private static readonly pb::MessageParser<Achievement> _parser = new pb::MessageParser<Achievement>(() => new Achievement());
       private pb::UnknownFieldSet _unknownFields;
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public static pb::MessageParser<Achievement> Parser { get { return _parser; } }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public static pbr::MessageDescriptor Descriptor {
-        get { return global::AchievementAllDataNotify.Descriptor.NestedTypes[0]; }
+        get { return AchievementAllDataNotify.Descriptor.NestedTypes[0]; }
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       pbr::MessageDescriptor pb::IMessage.Descriptor {
         get { return Descriptor; }
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public Achievement() {
         OnConstruction();
       }
 
       partial void OnConstruction();
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public Achievement(Achievement other) : this() {
         id_ = other.id_;
         status_ = other.status_;
@@ -263,8 +265,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
         _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public Achievement Clone() {
         return new Achievement(this);
       }
@@ -272,8 +274,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
       /// <summary>Field number for the "id" field.</summary>
       public const int IdFieldNumber = 14;
       private uint id_;
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public uint Id {
         get { return id_; }
         set {
@@ -283,10 +285,10 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
 
       /// <summary>Field number for the "status" field.</summary>
       public const int StatusFieldNumber = 13;
-      private global::AchievementAllDataNotify.Types.Achievement.Types.Status status_ = global::AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid;
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-      public global::AchievementAllDataNotify.Types.Achievement.Types.Status Status {
+      private AchievementAllDataNotify.Types.Achievement.Types.Status status_ = AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid;
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      public AchievementAllDataNotify.Types.Achievement.Types.Status Status {
         get { return status_; }
         set {
           status_ = value;
@@ -296,8 +298,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
       /// <summary>Field number for the "current" field.</summary>
       public const int CurrentFieldNumber = 12;
       private uint current_;
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public uint Current {
         get { return current_; }
         set {
@@ -308,8 +310,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
       /// <summary>Field number for the "total" field.</summary>
       public const int TotalFieldNumber = 8;
       private uint total_;
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public uint Total {
         get { return total_; }
         set {
@@ -320,8 +322,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
       /// <summary>Field number for the "timestamp" field.</summary>
       public const int TimestampFieldNumber = 11;
       private uint timestamp_;
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public uint Timestamp {
         get { return timestamp_; }
         set {
@@ -329,14 +331,14 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
         }
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public override bool Equals(object other) {
         return Equals(other as Achievement);
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public bool Equals(Achievement other) {
         if (ReferenceEquals(other, null)) {
           return false;
@@ -352,12 +354,12 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
         return Equals(_unknownFields, other._unknownFields);
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public override int GetHashCode() {
         int hash = 1;
         if (Id != 0) hash ^= Id.GetHashCode();
-        if (Status != global::AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) hash ^= Status.GetHashCode();
+        if (Status != AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) hash ^= Status.GetHashCode();
         if (Current != 0) hash ^= Current.GetHashCode();
         if (Total != 0) hash ^= Total.GetHashCode();
         if (Timestamp != 0) hash ^= Timestamp.GetHashCode();
@@ -367,14 +369,14 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
         return hash;
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public override string ToString() {
         return pb::JsonFormatter.ToDiagnosticString(this);
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public void WriteTo(pb::CodedOutputStream output) {
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         output.WriteRawMessage(this);
@@ -391,7 +393,7 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
           output.WriteRawTag(96);
           output.WriteUInt32(Current);
         }
-        if (Status != global::AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) {
+        if (Status != AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) {
           output.WriteRawTag(104);
           output.WriteEnum((int) Status);
         }
@@ -406,8 +408,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
       }
 
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
         if (Total != 0) {
           output.WriteRawTag(64);
@@ -421,7 +423,7 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
           output.WriteRawTag(96);
           output.WriteUInt32(Current);
         }
-        if (Status != global::AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) {
+        if (Status != AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) {
           output.WriteRawTag(104);
           output.WriteEnum((int) Status);
         }
@@ -435,14 +437,14 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
       }
       #endif
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public int CalculateSize() {
         int size = 0;
         if (Id != 0) {
           size += 1 + pb::CodedOutputStream.ComputeUInt32Size(Id);
         }
-        if (Status != global::AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) {
+        if (Status != AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) {
           size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
         }
         if (Current != 0) {
@@ -460,8 +462,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
         return size;
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public void MergeFrom(Achievement other) {
         if (other == null) {
           return;
@@ -469,7 +471,7 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
         if (other.Id != 0) {
           Id = other.Id;
         }
-        if (other.Status != global::AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) {
+        if (other.Status != AchievementAllDataNotify.Types.Achievement.Types.Status.Invalid) {
           Status = other.Status;
         }
         if (other.Current != 0) {
@@ -484,8 +486,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
         _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
       }
 
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public void MergeFrom(pb::CodedInputStream input) {
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         input.ReadRawMessage(this);
@@ -509,7 +511,7 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
               break;
             }
             case 104: {
-              Status = (global::AchievementAllDataNotify.Types.Achievement.Types.Status) input.ReadEnum();
+              Status = (AchievementAllDataNotify.Types.Achievement.Types.Status) input.ReadEnum();
               break;
             }
             case 112: {
@@ -522,8 +524,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
       }
 
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
         uint tag;
         while ((tag = input.ReadTag()) != 0) {
@@ -544,7 +546,7 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
               break;
             }
             case 104: {
-              Status = (global::AchievementAllDataNotify.Types.Achievement.Types.Status) input.ReadEnum();
+              Status = (AchievementAllDataNotify.Types.Achievement.Types.Status) input.ReadEnum();
               break;
             }
             case 112: {
@@ -558,8 +560,8 @@ public sealed partial class AchievementAllDataNotify : pb::IMessage<AchievementA
 
       #region Nested types
       /// <summary>Container for nested types declared in the Achievement message type.</summary>
-      [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-      [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+      [System.Diagnostics.DebuggerNonUserCodeAttribute]
+      [System.CodeDom.Compiler.GeneratedCode("protoc", null)]
       public static partial class Types {
         public enum Status {
           [pbr::OriginalName("INVALID")] Invalid = 0,

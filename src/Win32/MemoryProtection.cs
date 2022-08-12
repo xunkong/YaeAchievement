@@ -1,7 +1,8 @@
 ﻿namespace YaeAchievement.Win32;
 
 [Flags]
-public enum MemoryProtection : uint {
+public enum MemoryProtection : uint
+{
     Execute = 0x10,
     ExecuteRead = 0x20,
     ExecuteReadWrite = 0x40,

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -10,11 +10,17 @@
         <AssemblyVersion>2.0.0</AssemblyVersion>
         <FileVersion>2.0.0</FileVersion>
         <ApplicationIcon>icon.ico</ApplicationIcon>
+		<AssemblyName>YaeAchievement (Modified by Xunkong)</AssemblyName>
+		<!--<SelfContained>true</SelfContained>
+		<RuntimeIdentifier>win10-x64</RuntimeIdentifier>-->
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Google.Protobuf" Version="3.21.2" />
-      <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta1" />
+      <PackageReference Include="Google.Protobuf" Version="3.21.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="lib\YaeAchievementLib.vcxproj" />
     </ItemGroup>
 
 </Project>

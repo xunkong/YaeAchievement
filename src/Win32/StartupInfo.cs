@@ -3,10 +3,11 @@
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable FieldCanBeMadeReadOnly.Global
 
-namespace YaeAchievement.Win32; 
+namespace YaeAchievement.Win32;
 
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
-public struct StartupInfo {
+public struct StartupInfo
+{
     public uint cb;
     public string lpReserved;
     public string lpDesktop;
