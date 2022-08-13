@@ -205,7 +205,7 @@ public static class Utils
                File.Exists($"{dir}/UnityPlayer.dll") && File.Exists($"{dir}/mhypbase.dll");
     }
 
-    private static string SelectGameExecutable()
+    public static string SelectGameExecutable()
     {
         var fnPtr = Marshal.AllocHGlobal(32768);
         Native.RtlZeroMemory(fnPtr, 32768);
@@ -333,13 +333,13 @@ public static class Utils
     // ReSharper disable once UnusedMethodReturnValue.Global
     public static Thread StartAndWaitResult(string exePath, Func<string, bool> onReceive)
     {
-        const string lib = "C:/ProgramData/yae.dll";
-        File.Copy(Path.Combine(AppContext.BaseDirectory, GlobalVars.LibName), lib, true);
-        AppDomain.CurrentDomain.ProcessExit += (_, _) =>
-        {
-            File.Delete(lib);
-        };
-        //var lib = Path.Combine(AppContext.BaseDirectory, GlobalVars.LibName);
+        //const string lib = "C:/ProgramData/yae.dll";
+        //File.Copy(Path.Combine(AppContext.BaseDirectory, GlobalVars.LibName), lib, true);
+        //AppDomain.CurrentDomain.ProcessExit += (_, _) =>
+        //{
+        //    File.Delete(lib);
+        //};
+        var lib = Path.Combine(AppContext.BaseDirectory, GlobalVars.LibName);
         if (!File.Exists(lib))
         {
             throw new FileNotFoundException(lib);

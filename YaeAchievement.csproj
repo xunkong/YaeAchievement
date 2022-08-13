@@ -11,8 +11,6 @@
         <FileVersion>2.0.0</FileVersion>
         <ApplicationIcon>icon.ico</ApplicationIcon>
 		<AssemblyName>YaeAchievement (Modified by Xunkong)</AssemblyName>
-		<!--<SelfContained>true</SelfContained>
-		<RuntimeIdentifier>win10-x64</RuntimeIdentifier>-->
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,7 +18,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="lib\YaeAchievementLib.vcxproj" />
+      <None Update="YaeLib.dll">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

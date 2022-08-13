@@ -1,11 +1,6 @@
 ﻿global using YaeAchievement;
 using static YaeAchievement.Utils;
 
-var gamePath = args.FirstOrDefault();
-if (!File.Exists(gamePath))
-{
-    return;
-}
 
 InstallExitHook();
 CheckSelfIsRunning();
@@ -18,6 +13,12 @@ Console.WriteLine($"YaeAchievement (Modified by Xunkong) - 原神成就导出工
 Console.WriteLine("https://github.com/xunkong/YaeAchievement");
 Console.WriteLine("原项目 https://github.com/HolographicHat/YaeAchievement");
 Console.WriteLine("----------------------------------------------------");
+
+var gamePath = args.FirstOrDefault();
+if (!File.Exists(gamePath))
+{
+    gamePath = SelectGameExecutable();
+}
 
 
 StartAndWaitResult(gamePath, str =>
