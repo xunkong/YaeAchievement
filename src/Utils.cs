@@ -333,13 +333,15 @@ public static class Utils
     // ReSharper disable once UnusedMethodReturnValue.Global
     public static Thread StartAndWaitResult(string exePath, Func<string, bool> onReceive)
     {
-        //const string lib = "C:/ProgramData/yae.dll";
-        //File.Copy(Path.Combine(AppContext.BaseDirectory, GlobalVars.LibName), lib, true);
-        //AppDomain.CurrentDomain.ProcessExit += (_, _) =>
-        //{
-        //    File.Delete(lib);
-        //};
-        var lib = Path.Combine(AppContext.BaseDirectory, GlobalVars.LibName);
+        const string lib = "C:/ProgramData/yae.dll";
+        File.Copy(Path.Combine(AppContext.BaseDirectory, GlobalVars.LibName), lib, true);
+        AppDomain.CurrentDomain.ProcessExit += (_, _) =>
+        {
+            File.Delete(lib);
+        };
+        // 安装包中的dll无法注入成功
+        //var lib = Path.Combine(AppContext.BaseDirectory, GlobalVars.LibName);
+        //Console.WriteLine(lib);
         if (!File.Exists(lib))
         {
             throw new FileNotFoundException(lib);

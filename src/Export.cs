@@ -158,17 +158,17 @@ public static class Export
     public static void ToXunkong(AchievementAllDataNotify data)
     {
         var result = JsonSerializer.Serialize(ExportToUIAFApp(data));
+        var file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), $@"Xunkong\Export\Achievement\achievement_{DateTime.Now:yyyyMMdd_HHmmss}.json");
+        Directory.CreateDirectory(Path.GetDirectoryName(file)!);
+        File.WriteAllText(file, result);
         if (CheckXunkongScheme())
         {
             Utils.CopyToClipboard(result);
-            Utils.ShellOpen("xunkong://import-achievement?caller=YaeAchievement (Modified by Xunkong)&from=clipboard");
+            Utils.ShellOpen("xunkong://import-achievement?caller=YaeAchievement&from=clipboard");
             Console.WriteLine("等待导入到寻空。。。");
         }
         else
         {
-            var file = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), $@"Xunkong\Export\Achievement\achievement_{DateTime.Now:yyyyMMdd_HHmmss}.json");
-            Directory.CreateDirectory(Path.GetDirectoryName(file)!);
-            File.WriteAllText(file, result);
             Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("未能自动导入到寻空");
             Console.WriteLine(@"导出结果已保存到「我的文档\Xunkong\Export\Achievement」，请更新寻空至最新版本后重试。");
@@ -186,7 +186,7 @@ public static class Export
         {
             ["info"] = new Dictionary<string, object>
             {
-                ["export_app"] = "YaeAchievement (Modified by Xunkong)",
+                ["export_app"] = "YaeAchievement",
                 ["export_timestamp"] = DateTimeOffset.Now.ToUnixTimeMilliseconds(),
                 ["export_app_version"] = GlobalVars.AppVersionName,
                 ["uiaf_version"] = "v1.0"

@@ -11,6 +11,8 @@
         <FileVersion>2.0.0</FileVersion>
         <ApplicationIcon>icon.ico</ApplicationIcon>
 		<AssemblyName>YaeAchievement (Modified by Xunkong)</AssemblyName>
+		<Platforms>x86;x64;arm64</Platforms>
+		<RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
     </PropertyGroup>
 
     <ItemGroup>
