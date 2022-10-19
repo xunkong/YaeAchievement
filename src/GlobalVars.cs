@@ -17,8 +17,8 @@ public static class GlobalVars
     public static Logger.Level LogLevel = Logger.Level.Info;
     public static Version AppVersion = Assembly.GetEntryAssembly()!.GetName().Version!;
 
-    public const uint AppVersionCode = 29;
-    public const string AppVersionName = "2.1";
+    public const uint AppVersionCode = 30;
+    public const string AppVersionName = "2.2";
     public const string LibName = "YaeLib.dll";
     public const string PipeName = "YaeAchievementPipe";
     public const string BucketHost = "https://cn-cd-1259389942.file.myqcloud.com";
